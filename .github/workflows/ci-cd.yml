@@ -38,22 +38,29 @@ jobs:
       - run: ./gradlew test
 
   build:
-    needs: [test-frontend, test-backend]
+    needs: [ test-frontend, test-backend ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
+        working-directory: backend
+
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'temurin'
-      - run: ./gradlew build
+
+      - name: Build Backend
+        run: ./gradlew build
         working-directory: backend
+
       - name: Build Frontend
         run: npm run build
         working-directory: frontend
+
 
   package:
     needs: build
