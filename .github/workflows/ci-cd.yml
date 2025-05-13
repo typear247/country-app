@@ -65,6 +65,12 @@ jobs:
         run: npm run build
         working-directory: frontend
 
+      - name: Cleanup build artifacts
+        run: |
+          find backend -name '*plain.jar' -delete
+          find backend -name '*source.jar' -delete
+          find backend -name '*.javac.jar' -delete
+
 
 
   package:
