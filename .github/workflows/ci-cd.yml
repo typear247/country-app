@@ -42,6 +42,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
       - name: Build Backend
         run: ./gradlew build
         working-directory: backend
