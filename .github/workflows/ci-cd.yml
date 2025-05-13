@@ -71,6 +71,11 @@ jobs:
           find backend -name '*source.jar' -delete
           find backend -name '*.javac.jar' -delete
 
+      - name: Upload Backend JAR
+        uses: actions/upload-artifact@v3
+        with:
+          name: backend-jar
+          path: backend/build/libs/*.jar
 
 
   package:
