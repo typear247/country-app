@@ -1,5 +1,5 @@
 # country-app
-Backend API based on a Swagger document, integrate a frontend that retrieves and displays country flags using an Open API, and create a user interface with two distinct views
+Backend API based on [country-api.yaml](/openapi/country-api.yaml), integrated with frontend that retrieves and displays country flags using an Open API with two distinct views
 
 ## ✅ Overview
 
@@ -26,7 +26,7 @@ This is full-stack app with:
 - Backend: Spring Boot (Java 17), OpenAPI
 
 
-- Frontend: React, REST API (restcountries.com)
+- Frontend: React, REST API (https://restcountries.com/v3.1/all)
 
 
 - Testing: 
