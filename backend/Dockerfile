@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Copy the JAR file into the container
 ARG JAR_FILE=build/libs/*.jar
-COPY ${JAR_FILE} app.jar
+COPY ${JAR_FILE} registration_spring-0.0.1-SNAPSHOT.jar
 
 # Run the JAR file
 ENTRYPOINT ["java","-jar","app.jar"]
